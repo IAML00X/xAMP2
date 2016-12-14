@@ -138,6 +138,9 @@ public class MainViewController implements Initializable {
 //        }
     }
 
+    /*
+    * A searchfilter where you can search for songs.
+    */
     private void searchSong() {
         searchFilter.textProperty().addListener((ObservableValue<? extends String> listener, String oldQuery, String newQuery)
                 -> {
@@ -242,18 +245,27 @@ public class MainViewController implements Initializable {
         songs = (ObservableList<Song>) songmodel.getSongs();
     }
 
+    /*
+    * Plays the next song by pressing the forward button. 
+    */
     @FXML
     private void nextSong(MouseEvent event) {
         sm.playNextSong(songs);
 
     }
 
+    /*
+    * Deletes a song 
+    */
     @FXML
     private void deleteSong(ActionEvent event) {
         songmodel.getSongs().remove(selectedSong);
         songTbl.getItems().remove(selectedSong);
     }
 
+    /*
+    * Opens the edit view. 
+    */
     @FXML
     private void handleOnButtonActionSongEdit(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("EditSongView.fxml"));

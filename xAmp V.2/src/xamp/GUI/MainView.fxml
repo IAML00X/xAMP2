@@ -211,12 +211,14 @@
             <TableColumn fx:id="colAlbum" prefWidth="152.0" text="Album" />
         </columns>
       </TableView>
-      <Label fx:id="pauseButton" layoutX="174.0" layoutY="14.0" onMouseClicked="#pauseSongButton" prefHeight="60.0" prefWidth="62.0" />
-      <ImageView fitHeight="60.0" fitWidth="63.0" layoutX="174.0" layoutY="10.0">
-         <image>
-            <Image url="@pause-button-icon-44659.png" />
-         </image>
-      </ImageView>
+      <Label fx:id="pauseButton" layoutX="173.0" layoutY="10.0" onMouseClicked="#pauseSongButton" prefHeight="60.0" prefWidth="62.0">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="63.0">
+               <image>
+                  <Image url="@pause-button-icon-44659.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
       
           
    </children> 

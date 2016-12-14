@@ -21,6 +21,10 @@ public class SongManager
     private Song songPlaying;
     private MediaPlayer mp;
 
+    
+    /*
+    * Plays the music.
+    */
     public void playSong(Song song, boolean overwrite) 
     {
         if(songPlaying == null || overwrite)
@@ -35,14 +39,17 @@ public class SongManager
         mp.play();
     }
 
-//    public void play(Song song) {
-//        mp.play();
-//    }
+    /*
+    * Gets the medeiaplayer
+    */
     public MediaPlayer getMediaPlayer() 
     {
         return mp;
     }
     
+    /*
+    * Calls the mediaplayer and pause the music.
+    */
     public void pauseSong() 
     {
         if (songPlaying != null)
@@ -52,11 +59,17 @@ public class SongManager
         
     }
     
+    /*
+    * Calls the mediaplayer and plays the music.
+    */
     public void playSong()
     {
         mp.play();
     }
     
+    /*
+    * Plays the next song after the one song playing if finished. 
+    */
     public void playNextSong(ObservableList<Song> songs) {
         Song nextSong = null;
         for (int i = 0; i < songs.size() - 1; i++) {

@@ -10,11 +10,14 @@ import java.util.List;
 import xamp.BE.Song;
 
 /**
- *
+ * 
  * @author MissJ
  */
 public class SongSearcher {
 
+    /*
+    * A filter that searches for songs using a new list.  
+    */
     public ArrayList<Song> search(List<Song> songs, String searchQuery) {
         ArrayList<Song> result = new ArrayList<>();
 
@@ -34,9 +37,5 @@ public class SongSearcher {
         return result;
     }
 
-    //     private List<Song> songs;
-    //   public SongSearcher(List<Song> songs)
-    //   {
-    //       this.songs = songs;
-    //   }
+
 }

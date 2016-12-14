@@ -40,12 +40,18 @@ public class SongModel {
         return items;
     }
 
+    /*
+    * Sets the list with songs. 
+    */
     public void setSongs(List<Song> songs) 
     {
         items.clear();
         items.addAll(songs);
     }
 
+    /*
+    * Add a song.
+    */
     public void addSong(Song song) 
     {
         items.add(song);
